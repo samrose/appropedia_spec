@@ -6,5 +6,5 @@ require 'capybara/dsl'
 require 'selenium-webdriver'
 
 include Capybara::DSL
-
-APP_BASE_URL = "http://appropedia.org"
+Capybara.app_host = 'http://appropedia.org'
+Capybara.run_server = false

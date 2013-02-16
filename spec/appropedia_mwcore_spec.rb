@@ -1,4 +1,4 @@
-require spec_helper
+require 'spec_helper'
 describe "Appropedia MW Core" do
   it "displays home page" do
     visit '/'
