@@ -1,5 +1,10 @@
 require 'spec_helper'
 describe "Appropedia Core" do
+  it "dislays village pump" do
+    visit '/Appropedia:Village_pump'
+    page.status_code.should be(200)
+    page.should have_content("Appropedia:Village_pump")   
+  end	
   it "displays home page" do
     visit '/Welcome_to_Appropedia'
     page.status_code.should be(200)
@@ -14,11 +19,6 @@ describe "Appropedia Core" do
     visit '/Help:Editing'
     page.status_code.should be(200)
     page.should have_content("Help:Editing")   
-  end	
-  it "dislays village pump" do
-    visit '/Appropedia:Village_pump'
-    page.status_code.should be(200)
-    page.should have_content("Appropedia:Village_pump")   
   end	
   it "dislays help create a page" do
     visit '/Help:Creating_a_page'
